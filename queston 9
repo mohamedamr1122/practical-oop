@@ -1,0 +1,70 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package javaapplication37;
+import java.util.Scanner;
+
+/**
+ *
+ * @author STUDENT
+ */
+public class JavaApplication37 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        // TODO codimport java.util.Scanner;
+
+   
+        Scanner in =new Scanner(System.in);
+        
+        int n;
+        System.out.print("enter month ");
+        
+         n=in.nextInt();
+         switch(n)
+         {
+             case 1:
+                 case2:
+             
+             System.out.print("winter");
+                 break;
+                 case 3:
+               case 4:
+                   case 5:
+                        System.out.print("spring");
+             System.out.print("winter");
+                 break;
+                     
+                
+             
+         
+             
+       
+              
+                  case 6:
+                  case 7:
+                 case 8:
+             System.out.print("summer");
+                 break;
+     case 9:
+     case 10:
+     case 11:
+             
+             System.out.print("fall");
+                 break;
+   
+         case 12:
+             
+             System.out.print("winter");
+                 break;
+                              
+         }
+    }
+    
+}
