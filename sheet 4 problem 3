@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package javaapplication46;
+
+/**
+ *
+ * @author STUDENT
+ */
+public class JavaApplication46 {
+
+    
+    public static double computeArea(double radius) {
+        return Math.PI * radius * radius;
+    }
+
+    
+    public static double computeArea(double length, double width) {
+        return length * width;
+    }
+
+    public static double computeArea(double base, double height, boolean isTriangle) {
+        if (isTriangle) {
+            return 0.5 * base * height;
+        }
+        return 0.0;
+    }
+
+    public static void main(String[] args) {
+        double circleArea = computeArea(5.0);
+        double rectangleArea = computeArea(4.0, 6.0);
+        double triangleArea = computeArea(4.0, 6.0, true);
+
+        System.out.println("Circle Area = " + circleArea);
+        System.out.println("Rectangle Area = " + rectangleArea);
+        System.out.println("Triangle Area = " + triangleArea);
+    }
+}
