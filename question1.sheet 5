@@ -1,0 +1,66 @@
+
+import java.util.Scanner;
+
+public class question1 {
+
+    // Generates a secret integer between 1 and 50
+    public static int generateSecret() {
+        return (int) (Math.random() * 50) + 1;
+    }
+
+    // Compares the guess to the secret and returns the status
+    public static String checkGuess(int guess, int secret) {
+        if (guess == secret) {
+            return "Correct";
+        } else if (guess < secret) {
+            return "Higher";
+        } else {
+            return "Lower";
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int secret = generateSecret();
+        int[] guesses = new int[5]; 
+        boolean hasWon = false;
+        int attemptsUsed = 0;
+
+        System.out.println("=== Number Guessing Game ===");
+        System.out.println("I have chosen a secret number between 1 and 50.");
+        System.out.println("You have up to 5 attempts to guess it.\n");
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Attempt " + (i + 1) + " - Enter your guess: ");
+            int guess = scanner.nextInt();
+            
+          
+            guesses[i] = guess;
+            attemptsUsed++;
+
+           
+            String result = checkGuess(guess, secret);
+
+            if (result.equals("Correct")) {
+                hasWon = true;
+                System.out.println("Correct! You guessed the secret number in " + attemptsUsed + " attempt(s).");
+                break;
+            } else {
+                System.out.println(result);
+            }
+        }
+
+       
+        if (!hasWon) {
+            System.out.println("\nGame Over! You've used all 5 attempts.");
+            System.out.println("The secret number was: " + secret);
+        }
+
+        scanner.close();
+    }
+}
+   
+        
+      
+    
+
