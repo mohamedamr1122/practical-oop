@@ -1,0 +1,45 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package javaapplication62;
+
+/**
+ *
+ * @author STUDENT
+ */
+public class JavaApplication62 {
+
+    /**
+     * @param args the command line arguments
+     */
+   public static void main(String[] args) {
+      
+        Invoice myInvoice = new Invoice();
+
+        System.out.println("Invoice ID: " + myInvoice.getInvoiceId());
+        
+           System.out.println(" Total Invoice: " + myInvoice.getTotalInvoice());
+            
+          
+            
+        System.out.println("Price after discount: " + myInvoice.calculateDiscountPrice());
+
+       
+        myInvoice.setDiscount(5.5);
+        myInvoice.setTotalInvoice(200.0);
+
+ 
+        System.out.println("Invoice ID: " + myInvoice.getInvoiceId());
+        
+           System.out.println("new Total Invoice: " + myInvoice.getTotalInvoice()); 
+           
+           
+           
+           
+           System.out.println("Price after new discount: " + myInvoice.calculateDiscountPrice());
+    }
+    
+}

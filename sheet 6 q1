@@ -1,0 +1,54 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package javaapplication62;
+
+/**
+ *
+ * @author STUDENT
+ */
+public class Invoice {
+    private String invoiceID;
+    private double discount;
+    private double totalInvoice;
+    
+    public Invoice() {
+        this.invoiceID = "1";
+        this.discount = 2.5;
+        this.totalInvoice = 100.0;
+    }
+    public Invoice(String invoiceID, double discount, double totalInvoice) {
+        this.invoiceID = invoiceID;
+        this.discount = discount;
+        this.totalInvoice = totalInvoice;
+    }
+    public void setInvoiceID(String invoiceID) {
+        this.invoiceID = invoiceID;
+    }
+    public String getInvoiceId()
+    {
+        return invoiceID;
+    }
+    public double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
+    }
+    public double getTotalInvoice() {
+        return totalInvoice;
+    }
+
+    public void setTotalInvoice(double totalInvoice) {
+        this.totalInvoice = totalInvoice;
+    }
+    public double calculateDiscountPrice() {
+       
+      return totalInvoice - ( totalInvoice * discount / 100);
+    }
+    
+}
