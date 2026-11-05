@@ -1,0 +1,49 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package javaapplication63;
+
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author STUDENT
+ */
+public class JavaApplication63 {
+    
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+       
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the number of columns in the array: ");
+        int cols = input.nextInt();
+
+        double[] values = new double[cols];
+        System.out.print("Enter the array elements: ");
+        for (int i = 0; i < cols; i++) {
+            values[i] = input.nextDouble();
+        }
+
+        Location loc = new Location();
+        
+        loc.locateLargest(values);
+
+        System.out.println("The location of the largest element is " + loc.getMaxValue() + 
+                           " at position (" + loc.getColumn() + ")");
+        
+        
+        input.close();
+    }
+}
+    
+    
+
